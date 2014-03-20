@@ -6,6 +6,12 @@ using std::string;
 string intToRoman(int num)
 {
 	string returnString = "";
+
+	if (num >= 10)
+	{
+		returnString = "X";
+		num -= 10;
+	}	
 	
 	if (num >= 5)
 	{
@@ -31,4 +37,5 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(6) == "VI" );
 	REQUIRE( intToRoman(7) == "VII" );
 	REQUIRE( intToRoman(8) == "VIII" );
+	REQUIRE( intToRoman(10) == "X" );
 }
