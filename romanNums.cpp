@@ -10,6 +10,7 @@ string intToRoman(int num)
 	if (num == 5)
 		return returnString = "V";
 		
+	
 	while (num > 1)
 	{
 		returnString += "I";
@@ -25,4 +26,5 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(2) == "II" );
 	REQUIRE( intToRoman(3) == "III" );
 	REQUIRE( intToRoman(5) == "V" );
+	REQUIRE( intToRoman(6) == "VI" );
 }
