@@ -7,6 +7,12 @@ string intToRoman(int num)
 {
 	string returnString = "";
 
+	if (num >= 50)
+	{
+		returnString += "L";
+		num-= 50;
+	}
+
 	while (num >= 10)
 	{
 		returnString += "X";
@@ -61,5 +67,5 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(36) == "XXXVI" );
 	REQUIRE( intToRoman(37) == "XXXVII" );
 	REQUIRE( intToRoman(38) == "XXXVIII" );
-	REQUIRE( intToRoman(50) == "D" );
+	REQUIRE( intToRoman(50) == "L" );
 }
