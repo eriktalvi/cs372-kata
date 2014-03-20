@@ -7,7 +7,7 @@ string intToRoman(int num)
 {
 	string returnString = "I";
 	
-	if (num > 1)
+	while (num > 1)
 	{
 		returnString += "I";
 		num--;
