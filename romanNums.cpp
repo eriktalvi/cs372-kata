@@ -46,4 +46,19 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(17) == "XVII" );
 	REQUIRE( intToRoman(18) == "XVIII" );
 	REQUIRE( intToRoman(20) == "XX" );
+	REQUIRE( intToRoman(21) == "XXI" );
+	REQUIRE( intToRoman(22) == "XXII" );
+	REQUIRE( intToRoman(23) == "XXIII" );
+	REQUIRE( intToRoman(25) == "XXV" );
+	REQUIRE( intToRoman(26) == "XXVI" );
+	REQUIRE( intToRoman(27) == "XXVII" );
+	REQUIRE( intToRoman(28) == "XXVIII" );
+	REQUIRE( intToRoman(30) == "XXX" );
+	REQUIRE( intToRoman(31) == "XXXI" );
+	REQUIRE( intToRoman(32) == "XXXII" );
+	REQUIRE( intToRoman(33) == "XXXIII" );
+	REQUIRE( intToRoman(35) == "XXXV" );
+	REQUIRE( intToRoman(36) == "XXXVI" );
+	REQUIRE( intToRoman(37) == "XXXVII" );
+	REQUIRE( intToRoman(38) == "XXXVIII" );
 }
