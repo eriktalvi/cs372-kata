@@ -7,6 +7,8 @@ string intToRoman(int num)
 {
 	string returnString = "I";
 	
+	if (num == 5)
+		return returnString = "V";
 		
 	while (num > 1)
 	{
