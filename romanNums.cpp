@@ -10,6 +10,8 @@ string intToRoman(int num)
 	if (num == 5)
 		return returnString = "V";
 		
+	if (num == 6)
+		return returnString = "VI";
 	
 	while (num > 1)
 	{
