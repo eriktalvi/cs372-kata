@@ -7,10 +7,12 @@ string intToRoman(int num)
 {
 	string returnString = "I";
 	
-	if (num == 2)
-		return returnString += "I";
-	if (num == 3)
-		return returnString += "II";
+	if (num > 1)
+	{
+		returnString += "I";
+		num--;
+	}
+
 	return returnString;
 }
 
