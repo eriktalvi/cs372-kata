@@ -68,4 +68,36 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(37) == "XXXVII" );
 	REQUIRE( intToRoman(38) == "XXXVIII" );
 	REQUIRE( intToRoman(50) == "L" );
+	REQUIRE( intToRoman(51) == "LI" );
+	REQUIRE( intToRoman(52) == "LII" );
+	REQUIRE( intToRoman(53) == "LIII" );
+	REQUIRE( intToRoman(55) == "LV" );
+	REQUIRE( intToRoman(56) == "LVI" );
+	REQUIRE( intToRoman(57) == "LVII" );
+	REQUIRE( intToRoman(58) == "LVIII" );
+	REQUIRE( intToRoman(60) == "LX" );
+	REQUIRE( intToRoman(61) == "LXI" );
+	REQUIRE( intToRoman(62) == "LXII" );
+	REQUIRE( intToRoman(63) == "LXIII" );
+	REQUIRE( intToRoman(65) == "LXV" );
+	REQUIRE( intToRoman(66) == "LXVI" );
+	REQUIRE( intToRoman(67) == "LXVII" );
+	REQUIRE( intToRoman(68) == "LXVIII" );
+	REQUIRE( intToRoman(70) == "LXX" );
+	REQUIRE( intToRoman(71) == "LXXI" );
+	REQUIRE( intToRoman(72) == "LXXII" );
+	REQUIRE( intToRoman(73) == "LXXIII" );
+	REQUIRE( intToRoman(75) == "LXXV" );
+	REQUIRE( intToRoman(76) == "LXXVI" );
+	REQUIRE( intToRoman(77) == "LXXVII" );
+	REQUIRE( intToRoman(78) == "LXXVIII" );
+	REQUIRE( intToRoman(80) == "LXXX" );
+	REQUIRE( intToRoman(81) == "LXXXI" );
+	REQUIRE( intToRoman(82) == "LXXXII" );
+	REQUIRE( intToRoman(83) == "LXXXIII" );
+	REQUIRE( intToRoman(85) == "LXXXV" );
+	REQUIRE( intToRoman(86) == "LXXXVI" );
+	REQUIRE( intToRoman(87) == "LXXXVII" );
+	REQUIRE( intToRoman(88) == "LXXXVIII" );
+	
 }
