@@ -9,13 +9,13 @@ string intToRoman(int num)
 
 	if (num >= 10)
 	{
-		returnString = "X";
+		returnString += "X";
 		num -= 10;
 	}	
 	
 	if (num >= 5)
 	{
-		returnString = "V";
+		returnString += "V";
 		num -= 5;
 	}	
 	
