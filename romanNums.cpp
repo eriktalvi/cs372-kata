@@ -114,6 +114,7 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(87) == "LXXXVII" );
 //	REQUIRE( intToRoman(88) == "LXXXVIII" );
 //	REQUIRE( intToRoman(100) == "C" );
+	REQUIRE( intToRoman(400) == "CD" );
 //	REQUIRE( intToRoman(500) == "D" );
 	REQUIRE( intToRoman(1000) == "M" );
 	REQUIRE( intToRoman(1040) == "MXL" );
