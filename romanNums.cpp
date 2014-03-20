@@ -5,15 +5,15 @@ using std::string;
 
 string intToRoman(int num)
 {
-	string returnString = "I";
+	string returnString = "";
 	
 	if (num == 5)
-		return returnString = "V";
-		
-	if (num == 6)
-		return returnString = "VI";
+	{
+		returnString = "V";
+		num -= 5;
+	}	
 	
-	while (num > 1)
+	while (num > 0)
 	{
 		returnString += "I";
 		num--;
