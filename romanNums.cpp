@@ -25,7 +25,8 @@ string intToRoman(int num)
 
 	vector<Romans> romanRules {m,d,c,l,x,v,i};
 
-	for (auto i : romanRules)
+
+	for (std::vector<Romans>::iterator it=romanRules.begin(); it != romanRules.end(); ++it)
 	{
 		if (floor (num/10) * 10 == 40)
 		{
@@ -39,10 +40,10 @@ string intToRoman(int num)
 			num -= 4;
 		}
 		
-		while (num >= i.number)
+		while (num >= it->number)
 		{
-			returnString += i.roman;
-			num -= i.number;
+			returnString += it->roman;
+			num -= it->number;
 		}
 	}
 
