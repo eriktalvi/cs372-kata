@@ -7,6 +7,7 @@ string intToRoman(int num)
 {
 	string returnString = "I";
 	
+		
 	while (num > 1)
 	{
 		returnString += "I";
@@ -21,4 +22,5 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(1) == "I" );
 	REQUIRE( intToRoman(2) == "II" );
 	REQUIRE( intToRoman(3) == "III" );
+	REQUIRE( intToRoman(5) == "V" );
 }
