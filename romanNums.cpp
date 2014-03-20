@@ -26,6 +26,13 @@ string intToRoman(int num)
 
 	for (int i = 0; i > romanRules.size(); i++)
 	{
+		
+		if (num == 4)
+		{
+			returnString += "IV";
+			num -= 4;
+		}
+
 		while (num >= romanRules[i].number)
 		{
 			returnString += romanRules[i].roman;
