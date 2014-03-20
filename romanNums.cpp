@@ -28,16 +28,10 @@ string intToRoman(int num)
 
 	for (std::vector<Romans>::iterator it=romanRules.begin(); it != romanRules.end(); ++it)
 	{
-		if (floor (num/10) * 10 == 40)
+		if (floor (num/it->number) * it->number == 4*it->number)
 		{
-			returnString += "IL";
-			num-= 40;
-		}
-		
-		if (num == 4)
-		{
-			returnString += "IV";
-			num -= 4;
+			returnString += it->roman + (it-1)->roman ;
+			num-= 4*it->number;
 		}
 		
 		while (num >= it->number)
@@ -85,8 +79,8 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 //	REQUIRE( intToRoman(36) == "XXXVI" );
 //	REQUIRE( intToRoman(37) == "XXXVII" );
 //	REQUIRE( intToRoman(38) == "XXXVIII" );
-	REQUIRE( intToRoman(40) == "IL" );
-	REQUIRE( intToRoman(44) == "ILIV" );
+	REQUIRE( intToRoman(40) == "XL" );
+	REQUIRE( intToRoman(44) == "XLIV" );
 	REQUIRE( intToRoman(50) == "L" );
 //	REQUIRE( intToRoman(51) == "LI" );
 //	REQUIRE( intToRoman(52) == "LII" );
@@ -122,13 +116,13 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 //	REQUIRE( intToRoman(100) == "C" );
 //	REQUIRE( intToRoman(500) == "D" );
 	REQUIRE( intToRoman(1000) == "M" );
-	REQUIRE( intToRoman(1040) == "MIL" );
+	REQUIRE( intToRoman(1040) == "MXL" );
 	REQUIRE( intToRoman(1085) == "MLXXXV" );
 	REQUIRE( intToRoman(1086) == "MLXXXVI" );
 	REQUIRE( intToRoman(1087) == "MLXXXVII" );
 	REQUIRE( intToRoman(1088) == "MLXXXVIII" );
 	REQUIRE( intToRoman(1100) == "MC" );
-	REQUIRE( intToRoman(1144) == "MCILIV" );
+	REQUIRE( intToRoman(1144) == "MCXLIV" );
 	REQUIRE( intToRoman(1500) == "MD" );
 	REQUIRE( intToRoman(2000) == "MM" );
 	REQUIRE( intToRoman(3888) == "MMMDCCCLXXXVIII" ); //Largest number we can count to
