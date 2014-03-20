@@ -1,10 +1,10 @@
 #define CATCH_CONFIG_MAIN // This teels Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
+#include <cmath>
 #include <vector>
 #include <string>
 using std::string;
 using std::vector;
-#include <iostream>
 
 string intToRoman(int num)
 {
@@ -27,7 +27,7 @@ string intToRoman(int num)
 
 	for (auto i : romanRules)
 	{
-		if (num == 40)
+		if (floor (num/10) * 10 == 40)
 		{
 			returnString += "IL";
 			num-= 40;
