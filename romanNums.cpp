@@ -27,6 +27,11 @@ string intToRoman(int num)
 
 	for (auto i : romanRules)
 	{
+		if (num == 40)
+		{
+			returnString =+ "IL";
+			num-= 40;
+		}
 		
 		if (num == 4)
 		{
