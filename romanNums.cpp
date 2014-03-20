@@ -85,6 +85,7 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 //	REQUIRE( intToRoman(37) == "XXXVII" );
 //	REQUIRE( intToRoman(38) == "XXXVIII" );
 	REQUIRE( intToRoman(40) == "IL" );
+	REQUIRE( intToRoman(44) == "ILIV" );
 	REQUIRE( intToRoman(50) == "L" );
 //	REQUIRE( intToRoman(51) == "LI" );
 //	REQUIRE( intToRoman(52) == "LII" );
