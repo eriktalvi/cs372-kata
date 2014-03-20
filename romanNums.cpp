@@ -1,53 +1,36 @@
 #define CATCH_CONFIG_MAIN // This teels Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
+#include <vector>
 #include <string>
 using std::string;
+using std::vector;
 
 string intToRoman(int num)
 {
 	string returnString = "";
+	struct Romans
+	{
+		int number;
+		string roman;
+	};
 	
-	while (num >= 1000)
-	{
-		returnString += "M";
-		num-= 1000;
-	}
-	
-	if (num >= 500)
-	{
-		returnString += "D";
-		num-= 500;
-	}
+    Romans m{1000, "M"};
+    Romans d{500, "D"};
+    Romans c{100, "C"};
+    Romans l{50, "L"};
+    Romans x{10, "X"};
+    Romans v{5, "V"}; 
+    Romans i{1, "I"}; 	
 
+	vector<Romans> romanRules {m,d,c,l,x,v,i};
 
-	while (num >= 100)
+	for (auto i : romanRules)
 	{
-		returnString += "C";
-		num-= 100;
-	}
-
-	if (num >= 50)
-	{
-		returnString += "L";
-		num-= 50;
-	}
-
-	while (num >= 10)
-	{
-		returnString += "X";
-		num -= 10;
-	}	
-	
-	if (num >= 5)
-	{
-		returnString += "V";
-		num -= 5;
-	}	
-	
-	while (num > 0)
-	{
-		returnString += "I";
-		num--;
+		while (num >= i.number)
+		{
+			returnString += i.roman;
+			num -= i.number;
+		}
 	}
 
 	return returnString;
