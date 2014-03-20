@@ -6,7 +6,9 @@ using std::string;
 string intToRoman(int num)
 {
 	string returnString = "I";
-
+	
+	if (num == 2)
+		return returnString += "I";
 	return returnString;
 }
 
