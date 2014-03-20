@@ -30,4 +30,5 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(5) == "V" );
 	REQUIRE( intToRoman(6) == "VI" );
 	REQUIRE( intToRoman(7) == "VII" );
+	REQUIRE( intToRoman(8) == "VIII" );
 }
