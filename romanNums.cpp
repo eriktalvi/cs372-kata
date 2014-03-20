@@ -4,6 +4,7 @@
 #include <string>
 using std::string;
 using std::vector;
+#include <iostream>
 
 string intToRoman(int num)
 {
@@ -24,7 +25,7 @@ string intToRoman(int num)
 
 	vector<Romans> romanRules {m,d,c,l,x,v,i};
 
-	for (int i = 0; i > romanRules.size(); i++)
+	for (auto i : romanRules)
 	{
 		
 		if (num == 4)
@@ -32,11 +33,11 @@ string intToRoman(int num)
 			returnString += "IV";
 			num -= 4;
 		}
-
-		while (num >= romanRules[i].number)
+		
+		while (num >= i.number)
 		{
-			returnString += romanRules[i].roman;
-			num -= romanRules[i].number;
+			returnString += i.roman;
+			num -= i.number;
 		}
 	}
 
