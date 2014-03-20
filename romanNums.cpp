@@ -7,6 +7,13 @@ string intToRoman(int num)
 {
 	string returnString = "";
 
+	if (num >= 500)
+	{
+		returnString += "D";
+		num-= 500;
+	}
+
+
 	while (num >= 100)
 	{
 		returnString += "C";
@@ -107,4 +114,5 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(88) == "LXXXVIII" );
 	REQUIRE( intToRoman(100) == "C" );
 	REQUIRE( intToRoman(500) == "D" );
+	REQUIRE( intToRoman(1000) == "M" );
 }
