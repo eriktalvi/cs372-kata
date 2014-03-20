@@ -24,8 +24,9 @@ string intToRoman(int num)
 
 	vector<Romans> romanRules {m,d,c,l,x,v,i};
 
-	for (auto i : romanRules)
+	for (int i = 0; i > romanRules.size(); i++)
 	{
+
 		while (num >= i.number)
 		{
 			returnString += i.roman;
@@ -41,6 +42,7 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(1) == "I" );
 	REQUIRE( intToRoman(2) == "II" );
 	REQUIRE( intToRoman(3) == "III" );
+	REQUIRE( intToRoman(4) == "IV" );
 	REQUIRE( intToRoman(5) == "V" );
 	REQUIRE( intToRoman(6) == "VI" );
 	REQUIRE( intToRoman(7) == "VII" );
