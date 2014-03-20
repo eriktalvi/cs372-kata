@@ -127,6 +127,7 @@ TEST_CASE( "Testing Romans", "[intToRoman]" )
 	REQUIRE( intToRoman(1087) == "MLXXXVII" );
 	REQUIRE( intToRoman(1088) == "MLXXXVIII" );
 	REQUIRE( intToRoman(1100) == "MC" );
+	REQUIRE( intToRoman(1144) == "MCILIV" );
 	REQUIRE( intToRoman(1500) == "MD" );
 	REQUIRE( intToRoman(2000) == "MM" );
 	REQUIRE( intToRoman(3888) == "MMMDCCCLXXXVIII" ); //Largest number we can count to
