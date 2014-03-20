@@ -29,7 +29,7 @@ string intToRoman(int num)
 	{
 		if (num == 40)
 		{
-			returnString =+ "IL";
+			returnString += "IL";
 			num-= 40;
 		}
 		
