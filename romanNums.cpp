@@ -26,11 +26,10 @@ string intToRoman(int num)
 
 	for (int i = 0; i > romanRules.size(); i++)
 	{
-
-		while (num >= i.number)
+		while (num >= romanRules[i].number)
 		{
-			returnString += i.roman;
-			num -= i.number;
+			returnString += romanRules[i].roman;
+			num -= romanRules[i].number;
 		}
 	}
 
