@@ -9,6 +9,8 @@ string intToRoman(int num)
 	
 	if (num == 2)
 		return returnString += "I";
+	if (num == 3)
+		return returnString += "II";
 	return returnString;
 }
 
