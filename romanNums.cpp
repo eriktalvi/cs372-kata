@@ -7,6 +7,12 @@ string intToRoman(int num)
 {
 	string returnString = "";
 
+	while (num >= 100)
+	{
+		returnString += "C";
+		num-= 100;
+	}
+
 	if (num >= 50)
 	{
 		returnString += "L";
