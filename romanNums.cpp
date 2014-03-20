@@ -6,7 +6,13 @@ using std::string;
 string intToRoman(int num)
 {
 	string returnString = "";
-
+	
+	while (num >= 1000)
+	{
+		returnString += "M";
+		num-= 1000;
+	}
+	
 	if (num >= 500)
 	{
 		returnString += "D";
