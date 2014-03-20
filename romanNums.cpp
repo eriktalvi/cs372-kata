@@ -13,5 +13,5 @@ string intToRoman(int num)
 TEST_CASE( "Testing Romans", "[intToRoman]" ) 
 {
 	REQUIRE( intToRoman(1) == "I" );
+	REQUIRE( intToRoman(2) == "II" );
 }
-
