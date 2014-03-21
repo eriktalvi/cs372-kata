@@ -28,6 +28,12 @@ string intToRoman(int num)
 
 	for (std::vector<Romans>::iterator it=romanRules.begin(); it != romanRules.end(); ++it)
 	{
+		if (floor (num/(it+1)->number) * (it+1)->number == 9*(it+1)->number)
+		{
+			returnString += (it+1)->roman + (it-1)->roman ;
+			num-= 9*(it+1)->number;
+		}
+
 		if (floor (num/it->number) * it->number == 4*it->number)
 		{
 			returnString += it->roman + (it-1)->roman ;
